@@ -34,28 +34,32 @@ M = as.matrix(
            header = T, 
            row.names = 1))
 
-
+M
 
 
 #ejemplo de una matriz de RCA con personas y productos/ paises y productos-industrias
 ?RCA
 
 
+EL = get_list(M)
+colnames(EL) = c("customer","product","count")
 # La forma más usual de encontrar los datos
+EL
 
 
-
-
+MM = get_matrix(EL)
 # convertir un dataframe(lista) en matriz
 
-
+MM
 
 
 # edge list (lista de aristas(source-target----adyacentes-mis 3 columnas)
-
+EL
 
 # Matriz de adyancencia
-
+get_matrix(EL)
 
 #Buscar Andrea
 
+X= subset(EL,product=="Tie")
+X
